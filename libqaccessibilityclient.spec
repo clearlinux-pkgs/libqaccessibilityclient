@@ -9,7 +9,7 @@
 #
 Name     : libqaccessibilityclient
 Version  : 0.6.0
-Release  : 1
+Release  : 2
 URL      : https://download.kde.org/stable/libqaccessibilityclient/libqaccessibilityclient-0.6.0.tar.xz
 Source0  : https://download.kde.org/stable/libqaccessibilityclient/libqaccessibilityclient-0.6.0.tar.xz
 Source1  : https://download.kde.org/stable/libqaccessibilityclient/libqaccessibilityclient-0.6.0.tar.xz.sig
@@ -23,6 +23,7 @@ Requires: libqaccessibilityclient-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
 BuildRequires : extra-cmake-modules-data
+BuildRequires : qtbase-staticdev
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -89,7 +90,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1707235046
+export SOURCE_DATE_EPOCH=1707246144
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -126,7 +127,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1707235046
+export SOURCE_DATE_EPOCH=1707246144
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libqaccessibilityclient
 cp %{_builddir}/libqaccessibilityclient-%{version}/LICENSES/LGPL-2.1-only.txt %{buildroot}/usr/share/package-licenses/libqaccessibilityclient/81b58c89ceef8e9f8bd5d00a287edbd15f9d3567 || :
