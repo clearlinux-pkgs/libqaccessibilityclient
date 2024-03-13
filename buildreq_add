@@ -1,2 +1,3 @@
 buildreq-kde
 qtbase-staticdev
+buildreq-qt6
